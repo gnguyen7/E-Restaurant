@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eRestaurant.Framework.Entities
 {
-    class ReservationTables
+    class ReservationTable
     {
     }
 }
