@@ -17,7 +17,7 @@ namespace eRestaurant.Framework.Entities
         public int Capacity { get; set; }
         public bool Available { get; set; }
 
-        //public virtual ICollection<Bill> Bills { get; set; }
+        public virtual ICollection<Bill> Bills { get; set; }
         public virtual ICollection<Reservation> Reservations { get; set; }
 
         public Table()

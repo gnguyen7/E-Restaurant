@@ -23,7 +23,7 @@ namespace eRestaurant.Framework.Entities
         [Required, StringLength(15, MinimumLength = 4)]
         public string Phone { get; set; }
 
-        [Required, StringLength(30, MinimumLength = 8]
+        [Required, StringLength(30, MinimumLength = 8)]
         public string Address { get; set; }
 
         public DateTime HireDate {get;set;}

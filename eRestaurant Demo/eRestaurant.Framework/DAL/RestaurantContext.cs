@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
 using eRestaurant.Framework.Entities; //Need for Entity class
 using System.Data.Entity; //Need for DbContext and other EF class
 
@@ -17,15 +16,21 @@ namespace eRestaurant.Framework.DAL
             : base("DefaultConnection")
         { }
         //One property for each Table/Entity in the database
+        // The property name must match the name of the database table
         public DbSet<Table> Tables { get; set; }
         public DbSet<SpecialEvent> SpecialEvents { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Waiter> Waiters { get; set; }
 
-        //public DbSet<Bill> Bills { get; set; }
-        //public DbSet<BillItem> BillItems { get; set; }
+        public DbSet<Bill> Bills { get; set; }
+        public DbSet<BillItem> BillItems { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<MenuCategory> MenuCategories { get; set; }
-        //public DbSet<Waiter> Waiters { get; set; }
+        
+
+
+        //For customizing the model of our entities as we want them to match our
+        //database, we would put any detail inside the following method
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
